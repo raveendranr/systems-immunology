@@ -1,0 +1,328 @@
+---
+title: "FC02 — Article 10 — System Dynamics"
+
+format:
+  html:
+    toc: true
+  pdf:
+    pdf-engine: xelatex
+render-on-save: true
+---
+---
+title: "FC02 — Article 10 — System Dynamics"
+subtitle: "From Description to Model"
+format:
+  html:
+    toc: true
+    number-sections: false
+  pdf: default
+---
+
+## A formal definition of how the immune system evolves
+
+Up to this point, we have been describing the system through patterns and observations.
+
+What follows is where that description becomes a model.
+
+---
+
+We have described the system.
+
+Now we commit to modeling it.
+
+If the immune system is a state-based system, one question becomes unavoidable:
+
+**How does the state evolve?**
+
+A system is defined by how it evolves.  
+If we cannot describe that evolution, we do not yet have a model.
+
+---
+
+## 1. System Definition
+
+We now make a formal commitment.
+
+The immune system is a **partially observable, nonlinear, distributed dynamical system with feedback**.
+
+This is not a descriptive choice. It is a constraint imposed by the system.
+
+From this, one rule follows:
+
+> The future state of the system is determined by its current state and the inputs acting on it.
+
+---
+
+## 2. State Representation
+
+We begin by defining the internal state of the system explicitly.
+
+$$
+x(t) \in \mathbb{R}^n
+$$
+
+Here, $x(t)$ represents the **true internal state** of the immune system at time $t$.
+
+This is not directly observable — it is what we must infer.
+
+---
+
+### Explicit State Structure
+
+$$
+x(t) =
+\begin{bmatrix}
+x_1(t) \\
+x_2(t) \\
+\vdots \\
+x_n(t)
+\end{bmatrix}
+$$
+
+Each component represents a dimension of the system:
+
+- immune cell populations  
+- activation states  
+- cytokine environments  
+- tissue condition  
+- regulatory signals  
+
+The choice of components defines the resolution of the model.
+
+---
+
+### Partitioned State
+
+$$
+x(t) =
+\begin{bmatrix}
+x_{\text{immune}}(t) \\
+x_{\text{tissue}}(t) \\
+x_{\text{regulatory}}(t)
+\end{bmatrix}
+$$
+
+This reflects the distributed nature of the system.
+
+---
+
+## 3. State Evolution
+
+We now define how the state changes over time.
+
+$$
+x(t+1) = F\big(x(t), u(t)\big)
+$$
+
+The next state depends on the current state and what acts on it.
+
+Where:
+
+- $F$ represents internal dynamics  
+- $u(t)$ represents inputs (therapy, infection, environment)
+
+---
+
+### Component-wise View
+
+$$
+x_i(t+1) = f_i\big(x_1(t), \dots, x_n(t), u(t)\big)
+$$
+
+Each component evolves through interactions with others.
+
+There is no central controller — behavior emerges from interactions.
+
+---
+
+## 3A. Minimal Example
+
+Consider a simple system:
+
+- $x(t)$ = inflammation level  
+- $u(t)$ = anti-inflammatory input  
+
+---
+
+### Low initial state
+
+- $x(0) = 0.2$ → decays → stabilizes  
+
+---
+
+### Higher initial state
+
+- $x(0) = 0.6$ → amplifies → diverges  
+
+---
+
+### Implication
+
+> The trajectory depends on the state, not just the intervention.
+
+---
+
+## 3B. Basins of Attraction
+
+The system evolves within a space of possible states.
+
+Some states act as attractors.
+
+$$
+x^* = F(x^*, u^*)
+$$
+
+States near these points converge toward them.
+
+---
+
+### Interpretation
+
+> Disease corresponds to being confined within a basin of attraction.
+
+---
+
+### Therapy Reinterpreted
+
+- within basin → temporary effect  
+- crossing basin → qualitative change  
+
+---
+
+## 3C. Energy Landscape (Intuition)
+
+We can interpret stability using a function:
+
+$$
+V(x)
+$$
+
+Lower values correspond to more stable states.
+
+---
+
+### Approximate dynamics
+
+$$
+x(t+1) \approx x(t) - \nabla V(x(t))
+$$
+
+This is an approximation, not a general rule.
+
+It helps visualize how systems settle into stable states.
+
+---
+
+### Implication
+
+> Recovery requires crossing stability barriers, not just reversing direction.
+
+---
+
+## 4. Properties of the Dynamics
+
+### Nonlinearity
+
+$$
+F(x_1 + x_2, u) \neq F(x_1, u) + F(x_2, u)
+$$
+
+This allows thresholds and tipping behavior.
+
+---
+
+### State Dependence
+
+$$
+\frac{\partial F}{\partial u}(x_1) \neq \frac{\partial F}{\partial u}(x_2)
+$$
+
+The same input produces different outcomes in different states.
+
+---
+
+### Feedback
+
+$$
+x(t+2) = F(F(x(t), u(t)), u(t+1))
+$$
+
+The system evolves through feedback loops.
+
+---
+
+### Local Linear Approximation
+
+$$
+x(t+1) \approx A(x^*)x(t) + B(x^*)u(t)
+$$
+
+Valid only near a specific operating point.
+
+---
+
+## 5. Observation
+
+We observe a projection of the true state.
+$$
+y(t) = H(x(t))
+$$
+
+This means what we observe is a transformation of the underlying state, not the state itself.
+
+---
+
+### Consequence
+
+$$
+x(t) \neq H^{-1}(y(t))
+$$
+
+The state cannot be uniquely reconstructed.
+
+---
+
+## 6. Structure
+
+All previously introduced elements resolve into this structure:
+
+- state  
+- dynamics  
+- observation  
+- input  
+
+---
+
+## 7. Core Claim
+
+> Disease is not a condition.  
+> It is a trajectory of $x(t)$ over time.
+
+And:
+
+> Clinical labels classify $y(t)$, not $x(t)$.
+
+---
+
+## 8. What This Model Does Not Claim
+
+This is a model class, not a full specification.
+
+It does not define:
+
+- exact form of $F$  
+- estimation methods  
+- control strategies  
+- disease-specific mappings  
+
+---
+
+## Closing
+
+We no longer have a description.
+
+We have a model class.
+
+From this point forward:
+
+> Every claim must be consistent with this structure.
