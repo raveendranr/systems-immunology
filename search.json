@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "",
+    "text": "Up to this point, we have been describing the system through patterns and observations.\nWhat follows is where that description becomes a model.\n\nWe have described the system.\nNow we commit to modeling it.\nIf the immune system is a state-based system, one question becomes unavoidable:\nHow does the state evolve?\nA system is defined by how it evolves.\nIf we cannot describe that evolution, we do not yet have a model."
+  },
+  {
+    "objectID": "index.html#a-formal-definition-of-how-the-immune-system-evolves",
+    "href": "index.html#a-formal-definition-of-how-the-immune-system-evolves",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "",
+    "text": "Up to this point, we have been describing the system through patterns and observations.\nWhat follows is where that description becomes a model.\n\nWe have described the system.\nNow we commit to modeling it.\nIf the immune system is a state-based system, one question becomes unavoidable:\nHow does the state evolve?\nA system is defined by how it evolves.\nIf we cannot describe that evolution, we do not yet have a model."
+  },
+  {
+    "objectID": "index.html#system-definition",
+    "href": "index.html#system-definition",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "1. System Definition",
+    "text": "1. System Definition\nWe now make a formal commitment.\nThe immune system is a partially observable, nonlinear, distributed dynamical system with feedback.\nThis is not a descriptive choice. It is a constraint imposed by the system.\nFrom this, one rule follows:\n\nThe future state of the system is determined by its current state and the inputs acting on it."
+  },
+  {
+    "objectID": "index.html#state-representation",
+    "href": "index.html#state-representation",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "2. State Representation",
+    "text": "2. State Representation\nWe begin by defining the internal state of the system explicitly.\n\\[\nx(t) \\in \\mathbb{R}^n\n\\]\nHere, \\(x(t)\\) represents the true internal state of the immune system at time \\(t\\).\nThis is not directly observable — it is what we must infer.\n\n\nExplicit State Structure\n\\[\nx(t) =\n\\begin{bmatrix}\nx_1(t) \\\\\nx_2(t) \\\\\n\\vdots \\\\\nx_n(t)\n\\end{bmatrix}\n\\]\nEach component represents a dimension of the system:\n\nimmune cell populations\n\nactivation states\n\ncytokine environments\n\ntissue condition\n\nregulatory signals\n\nThe choice of components defines the resolution of the model.\n\n\n\nPartitioned State\n\\[\nx(t) =\n\\begin{bmatrix}\nx_{\\text{immune}}(t) \\\\\nx_{\\text{tissue}}(t) \\\\\nx_{\\text{regulatory}}(t)\n\\end{bmatrix}\n\\]\nThis reflects the distributed nature of the system."
+  },
+  {
+    "objectID": "index.html#state-evolution",
+    "href": "index.html#state-evolution",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "3. State Evolution",
+    "text": "3. State Evolution\nWe now define how the state changes over time.\n\\[\nx(t+1) = F\\big(x(t), u(t)\\big)\n\\]\nThe next state depends on the current state and what acts on it.\nWhere:\n\n\\(F\\) represents internal dynamics\n\n\\(u(t)\\) represents inputs (therapy, infection, environment)\n\n\n\nComponent-wise View\n\\[\nx_i(t+1) = f_i\\big(x_1(t), \\dots, x_n(t), u(t)\\big)\n\\]\nEach component evolves through interactions with others.\nThere is no central controller — behavior emerges from interactions."
+  },
+  {
+    "objectID": "index.html#a.-minimal-example",
+    "href": "index.html#a.-minimal-example",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "3A. Minimal Example",
+    "text": "3A. Minimal Example\nConsider a simple system:\n\n\\(x(t)\\) = inflammation level\n\n\\(u(t)\\) = anti-inflammatory input\n\n\n\nLow initial state\n\n\\(x(0) = 0.2\\) → decays → stabilizes\n\n\n\n\nHigher initial state\n\n\\(x(0) = 0.6\\) → amplifies → diverges\n\n\n\n\nImplication\n\nThe trajectory depends on the state, not just the intervention."
+  },
+  {
+    "objectID": "index.html#b.-basins-of-attraction",
+    "href": "index.html#b.-basins-of-attraction",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "3B. Basins of Attraction",
+    "text": "3B. Basins of Attraction\nThe system evolves within a space of possible states.\nSome states act as attractors.\n\\[\nx^* = F(x^*, u^*)\n\\]\nStates near these points converge toward them.\n\n\nInterpretation\n\nDisease corresponds to being confined within a basin of attraction.\n\n\n\n\nTherapy Reinterpreted\n\nwithin basin → temporary effect\n\ncrossing basin → qualitative change"
+  },
+  {
+    "objectID": "index.html#c.-energy-landscape-intuition",
+    "href": "index.html#c.-energy-landscape-intuition",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "3C. Energy Landscape (Intuition)",
+    "text": "3C. Energy Landscape (Intuition)\nWe can interpret stability using a function:\n\\[\nV(x)\n\\]\nLower values correspond to more stable states.\n\n\nApproximate dynamics\n\\[\nx(t+1) \\approx x(t) - \\nabla V(x(t))\n\\]\nThis is an approximation, not a general rule.\nIt helps visualize how systems settle into stable states.\n\n\n\nImplication\n\nRecovery requires crossing stability barriers, not just reversing direction."
+  },
+  {
+    "objectID": "index.html#properties-of-the-dynamics",
+    "href": "index.html#properties-of-the-dynamics",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "4. Properties of the Dynamics",
+    "text": "4. Properties of the Dynamics\n\nNonlinearity\n\\[\nF(x_1 + x_2, u) \\neq F(x_1, u) + F(x_2, u)\n\\]\nThis allows thresholds and tipping behavior.\n\n\n\nState Dependence\n\\[\n\\frac{\\partial F}{\\partial u}(x_1) \\neq \\frac{\\partial F}{\\partial u}(x_2)\n\\]\nThe same input produces different outcomes in different states.\n\n\n\nFeedback\n\\[\nx(t+2) = F(F(x(t), u(t)), u(t+1))\n\\]\nThe system evolves through feedback loops.\n\n\n\nLocal Linear Approximation\n\\[\nx(t+1) \\approx A(x^*)x(t) + B(x^*)u(t)\n\\]\nValid only near a specific operating point."
+  },
+  {
+    "objectID": "index.html#observation",
+    "href": "index.html#observation",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "5. Observation",
+    "text": "5. Observation\nWe observe a projection of the true state. \\[\ny(t) = H(x(t))\n\\]\nThis means what we observe is a transformation of the underlying state, not the state itself.\n\n\nConsequence\n\\[\nx(t) \\neq H^{-1}(y(t))\n\\]\nThe state cannot be uniquely reconstructed."
+  },
+  {
+    "objectID": "index.html#structure",
+    "href": "index.html#structure",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "6. Structure",
+    "text": "6. Structure\nAll previously introduced elements resolve into this structure:\n\nstate\n\ndynamics\n\nobservation\n\ninput"
+  },
+  {
+    "objectID": "index.html#core-claim",
+    "href": "index.html#core-claim",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "7. Core Claim",
+    "text": "7. Core Claim\n\nDisease is not a condition.\nIt is a trajectory of \\(x(t)\\) over time.\n\nAnd:\n\nClinical labels classify \\(y(t)\\), not \\(x(t)\\)."
+  },
+  {
+    "objectID": "index.html#what-this-model-does-not-claim",
+    "href": "index.html#what-this-model-does-not-claim",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "8. What This Model Does Not Claim",
+    "text": "8. What This Model Does Not Claim\nThis is a model class, not a full specification.\nIt does not define:\n\nexact form of \\(F\\)\n\nestimation methods\n\ncontrol strategies\n\ndisease-specific mappings"
+  },
+  {
+    "objectID": "index.html#closing",
+    "href": "index.html#closing",
+    "title": "FC02 — Article 10 — System Dynamics",
+    "section": "Closing",
+    "text": "Closing\nWe no longer have a description.\nWe have a model class.\nFrom this point forward:\n\nEvery claim must be consistent with this structure."
+  }
+]
