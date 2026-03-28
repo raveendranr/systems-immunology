@@ -1,5 +1,68 @@
 [
   {
+    "objectID": "foundations.html",
+    "href": "foundations.html",
+    "title": "Foundations (FC01)",
+    "section": "",
+    "text": "Before formal modeling, we developed a systems view of immune behavior.\nThese articles establish the conceptual base.\n\n\n\n\nArticle 01 — When the Numbers Don’t Explain the Disease\n\nArticle 02 — Why Immunology Needs Systems Thinking\n\nArticle 03 — The Immune System Is Not a Hierarchy\n\nArticle 04 — Observability in Biological Systems\n\nArticle 05 — State-Space Representation\n\nArticle 06 — Multi-Agent Immune System\n\nArticle 07 — Consensus Dynamics\n\nArticle 08 — Therapy as Control Inputs\n\nArticle 09 — Formalizing the System\n\n\n\n\n\nThese pieces move from:\n\nobservation → pattern\n\npattern → structure\n\nThey set up the transition to formal modeling.\n\n\n\n\n👉 The formal layer begins here:\nSystem Dynamics — Article 10"
+  },
+  {
+    "objectID": "foundations.html#articles",
+    "href": "foundations.html#articles",
+    "title": "Foundations (FC01)",
+    "section": "",
+    "text": "Article 01 — When the Numbers Don’t Explain the Disease\n\nArticle 02 — Why Immunology Needs Systems Thinking\n\nArticle 03 — The Immune System Is Not a Hierarchy\n\nArticle 04 — Observability in Biological Systems\n\nArticle 05 — State-Space Representation\n\nArticle 06 — Multi-Agent Immune System\n\nArticle 07 — Consensus Dynamics\n\nArticle 08 — Therapy as Control Inputs\n\nArticle 09 — Formalizing the System"
+  },
+  {
+    "objectID": "foundations.html#role-in-the-framework",
+    "href": "foundations.html#role-in-the-framework",
+    "title": "Foundations (FC01)",
+    "section": "",
+    "text": "These pieces move from:\n\nobservation → pattern\n\npattern → structure\n\nThey set up the transition to formal modeling."
+  },
+  {
+    "objectID": "foundations.html#transition",
+    "href": "foundations.html#transition",
+    "title": "Foundations (FC01)",
+    "section": "",
+    "text": "👉 The formal layer begins here:\nSystem Dynamics — Article 10"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Systems Engineering Immunology",
+    "section": "",
+    "text": "A formal systems framework for understanding immune dynamics.\n\n\n\n👉 Article 10 — System Dynamics\n\n\n\n\nConceptual groundwork leading to formal modeling.\n\n\n\n\nThis site will evolve into a navigable system of:\n\nFormal models\n\nConceptual layers\n\nSystem representations\n\n\n\n\n\n👉 Substack: https://raveendranr.substack.com"
+  },
+  {
+    "objectID": "index.html#start-here",
+    "href": "index.html#start-here",
+    "title": "Systems Engineering Immunology",
+    "section": "",
+    "text": "👉 Article 10 — System Dynamics"
+  },
+  {
+    "objectID": "index.html#foundations-fc01",
+    "href": "index.html#foundations-fc01",
+    "title": "Systems Engineering Immunology",
+    "section": "",
+    "text": "Conceptual groundwork leading to formal modeling."
+  },
+  {
+    "objectID": "index.html#structure",
+    "href": "index.html#structure",
+    "title": "Systems Engineering Immunology",
+    "section": "",
+    "text": "This site will evolve into a navigable system of:\n\nFormal models\n\nConceptual layers\n\nSystem representations"
+  },
+  {
+    "objectID": "index.html#live-exploration",
+    "href": "index.html#live-exploration",
+    "title": "Systems Engineering Immunology",
+    "section": "",
+    "text": "👉 Substack: https://raveendranr.substack.com"
+  },
+  {
     "objectID": "article10.html",
     "href": "article10.html",
     "title": "FC02 — Article 10 — System Dynamics",
@@ -96,40 +159,5 @@
     "title": "FC02 — Article 10 — System Dynamics",
     "section": "Closing",
     "text": "Closing\nWe no longer have a description.\nWe have a model class.\nFrom this point forward:\n\nEvery claim must be consistent with this structure."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Systems Engineering Immunology",
-    "section": "",
-    "text": "A formal systems framework for understanding immune dynamics.\n\n\n\n👉 Article 10 — System Dynamics\n\n\n\n\nConceptual groundwork leading to formal modeling.\n\n\n\n\nThis site will evolve into a navigable system of:\n\nFormal models\n\nConceptual layers\n\nSystem representations\n\n\n\n\n\n👉 Substack: https://raveendranr.substack.com"
-  },
-  {
-    "objectID": "index.html#start-here",
-    "href": "index.html#start-here",
-    "title": "Systems Engineering Immunology",
-    "section": "",
-    "text": "👉 Article 10 — System Dynamics"
-  },
-  {
-    "objectID": "index.html#foundations-fc01",
-    "href": "index.html#foundations-fc01",
-    "title": "Systems Engineering Immunology",
-    "section": "",
-    "text": "Conceptual groundwork leading to formal modeling."
-  },
-  {
-    "objectID": "index.html#structure",
-    "href": "index.html#structure",
-    "title": "Systems Engineering Immunology",
-    "section": "",
-    "text": "This site will evolve into a navigable system of:\n\nFormal models\n\nConceptual layers\n\nSystem representations"
-  },
-  {
-    "objectID": "index.html#live-exploration",
-    "href": "index.html#live-exploration",
-    "title": "Systems Engineering Immunology",
-    "section": "",
-    "text": "👉 Substack: https://raveendranr.substack.com"
   }
 ]
