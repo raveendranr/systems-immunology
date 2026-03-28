@@ -4,18 +4,7 @@ title: "FC02 — Article 10 — System Dynamics"
 format:
   html:
     toc: true
-  pdf:
-    pdf-engine: xelatex
-render-on-save: true
----
----
-title: "FC02 — Article 10 — System Dynamics"
-subtitle: "From Description to Model"
-format:
-  html:
-    toc: true
-    number-sections: false
-  pdf: default
+
 ---
 
 ## A formal definition of how the immune system evolves
