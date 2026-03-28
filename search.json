@@ -4,28 +4,42 @@
     "href": "foundations.html",
     "title": "Foundations (FC01)",
     "section": "",
-    "text": "Before formal modeling, we developed a systems view of immune behavior.\nThese articles establish the conceptual base.\n\n\n\n\nArticle 01 — When the Numbers Don’t Explain the Disease\n\nArticle 02 — Why Immunology Needs Systems Thinking\n\nArticle 03 — The Immune System Is Not a Hierarchy\n\nArticle 04 — Observability in Biological Systems\n\nArticle 05 — State-Space Representation\n\nArticle 06 — Multi-Agent Immune System\n\nArticle 07 — Consensus Dynamics\n\nArticle 08 — Therapy as Control Inputs\n\nArticle 09 — Formalizing the System\n\n\n\n\n\nThese pieces move from:\n\nobservation → pattern\n\npattern → structure\n\nThey set up the transition to formal modeling.\n\n\n\n\n👉 The formal layer begins here:\nSystem Dynamics — Article 10"
+    "text": "These articles form the conceptual base for the formal model introduced in Article 10."
+  },
+  {
+    "objectID": "foundations.html#they-should-be-read-as-a-progression-toward-system-level-thinking.",
+    "href": "foundations.html#they-should-be-read-as-a-progression-toward-system-level-thinking.",
+    "title": "Foundations (FC01)",
+    "section": "They should be read as a progression toward system-level thinking.",
+    "text": "They should be read as a progression toward system-level thinking."
+  },
+  {
+    "objectID": "foundations.html#title-foundations-fc01",
+    "href": "foundations.html#title-foundations-fc01",
+    "title": "Foundations (FC01)",
+    "section": "title: Foundations (FC01)",
+    "text": "title: Foundations (FC01)"
   },
   {
     "objectID": "foundations.html#articles",
     "href": "foundations.html#articles",
     "title": "Foundations (FC01)",
-    "section": "",
-    "text": "Article 01 — When the Numbers Don’t Explain the Disease\n\nArticle 02 — Why Immunology Needs Systems Thinking\n\nArticle 03 — The Immune System Is Not a Hierarchy\n\nArticle 04 — Observability in Biological Systems\n\nArticle 05 — State-Space Representation\n\nArticle 06 — Multi-Agent Immune System\n\nArticle 07 — Consensus Dynamics\n\nArticle 08 — Therapy as Control Inputs\n\nArticle 09 — Formalizing the System"
+    "section": "Articles",
+    "text": "Articles\n\nArticle 01 — When the Numbers Don’t Explain the Disease\n\nArticle 02 — Why Immunology Needs Systems Thinking\n\nArticle 03 — The Immune System Is Not a Hierarchy\n\nArticle 04 — Observability in Biological Systems\n\nArticle 05 — State-Space Representation\n\nArticle 06 — Multi-Agent Immune System\n\nArticle 07 — Consensus Dynamics\n\nArticle 08 — Therapy as Control Inputs\n\nArticle 09 — Formalizing the System"
   },
   {
     "objectID": "foundations.html#role-in-the-framework",
     "href": "foundations.html#role-in-the-framework",
     "title": "Foundations (FC01)",
-    "section": "",
-    "text": "These pieces move from:\n\nobservation → pattern\n\npattern → structure\n\nThey set up the transition to formal modeling."
+    "section": "Role in the Framework",
+    "text": "Role in the Framework\nThese pieces move from:\n\nobservation → pattern\n\npattern → structure\n\nThey set up the transition to formal modeling."
   },
   {
     "objectID": "foundations.html#transition",
     "href": "foundations.html#transition",
     "title": "Foundations (FC01)",
-    "section": "",
-    "text": "👉 The formal layer begins here:\nSystem Dynamics — Article 10"
+    "section": "Transition",
+    "text": "Transition\n👉 The formal layer begins here:\nSystem Dynamics — Article 10"
   },
   {
     "objectID": "index.html",
@@ -39,28 +53,28 @@
     "href": "index.html#start-here",
     "title": "Systems Engineering Immunology",
     "section": "Start Here",
-    "text": "Start Here\n👉 Article 10 — System Dynamics"
+    "text": "Start Here\n👉 Article 10 — System Dynamics\nThis is the first formal definition of how the immune system evolves.\nIt marks the transition from:\n\ndescriptive observation\n→ to\n\nexplicit system modeling"
   },
   {
     "objectID": "index.html#foundations-fc01",
     "href": "index.html#foundations-fc01",
     "title": "Systems Engineering Immunology",
     "section": "Foundations (FC01)",
-    "text": "Foundations (FC01)\nConceptual groundwork leading to formal modeling."
+    "text": "Foundations (FC01)\nBefore formalization, we established a systems view of immune behavior.\nThese ideas explain:\n\nwhy the same disease behaves differently\n\nwhy treatment responses diverge\n\nwhy observations do not fully represent the system\n\n👉 See: Foundations"
   },
   {
-    "objectID": "index.html#structure",
-    "href": "index.html#structure",
+    "objectID": "index.html#what-this-is",
+    "href": "index.html#what-this-is",
     "title": "Systems Engineering Immunology",
-    "section": "Structure",
-    "text": "Structure\nThis site will evolve into a navigable system of:\n\nFormal models\n\nConceptual layers\n\nSystem representations"
+    "section": "What This Is",
+    "text": "What This Is\nThis is not a collection of articles.\nIt is a structured attempt to define:\n\nthe immune system as a dynamical system\n\ndisease as a trajectory\n\ntherapy as a control input"
   },
   {
-    "objectID": "index.html#live-exploration",
-    "href": "index.html#live-exploration",
+    "objectID": "index.html#explore-further",
+    "href": "index.html#explore-further",
     "title": "Systems Engineering Immunology",
-    "section": "Live Exploration",
-    "text": "Live Exploration\n👉 Substack: https://raveendranr.substack.com"
+    "section": "Explore Further",
+    "text": "Explore Further\n👉 Substack: https://raveendranr.substack.com"
   },
   {
     "objectID": "article10.html",
