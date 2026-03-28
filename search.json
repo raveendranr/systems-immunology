@@ -95,7 +95,7 @@
     "href": "article10.html#system-definition",
     "title": "FC02 — Article 10 — System Dynamics",
     "section": "1. System Definition",
-    "text": "1. System Definition\nWe now make a formal commitment.\nThe immune system is a partially observable, nonlinear, distributed dynamical system with feedback.\nThis is not a descriptive choice. It is a constraint imposed by the system.\nFrom this, one rule follows:\n\nThe future state of the system is determined by its current state and the inputs acting on it."
+    "text": "1. System Definition\nWe now make a formal commitment.\nThe immune system is a partially observable, nonlinear, distributed dynamical system with feedback.\nThis is not a descriptive choice. It is a constraint imposed by the system.\nFrom this, one rule follows:\nThe future state of the system is determined by its current state and the inputs acting on it."
   },
   {
     "objectID": "article10.html#state-representation",
@@ -116,21 +116,21 @@
     "href": "article10.html#a.-minimal-example",
     "title": "FC02 — Article 10 — System Dynamics",
     "section": "3A. Minimal Example",
-    "text": "3A. Minimal Example\nConsider a simple system:\n\n\\(x(t)\\) = inflammation level\n\n\\(u(t)\\) = anti-inflammatory input\n\n\n\nLow initial state\n\n\\(x(0) = 0.2\\) → decays → stabilizes\n\n\n\n\nHigher initial state\n\n\\(x(0) = 0.6\\) → amplifies → diverges\n\n\n\n\nImplication\n\nThe trajectory depends on the state, not just the intervention."
+    "text": "3A. Minimal Example\nConsider a simple system:\n\n\\(x(t)\\) = inflammation level\n\n\\(u(t)\\) = anti-inflammatory input\n\n\n\nLow initial state\n\n\\(x(0) = 0.2\\) → decays → stabilizes\n\n\n\n\nHigher initial state\n\n\\(x(0) = 0.6\\) → amplifies → diverges\n\n\n\n\nImplication\nThe trajectory depends on the state, not just the intervention."
   },
   {
     "objectID": "article10.html#b.-basins-of-attraction",
     "href": "article10.html#b.-basins-of-attraction",
     "title": "FC02 — Article 10 — System Dynamics",
     "section": "3B. Basins of Attraction",
-    "text": "3B. Basins of Attraction\nThe system evolves within a space of possible states.\nSome states act as attractors.\n\\[\nx^* = F(x^*, u^*)\n\\]\nStates near these points converge toward them.\n\n\nInterpretation\n\nDisease corresponds to being confined within a basin of attraction.\n\n\n\n\nTherapy Reinterpreted\n\nwithin basin → temporary effect\n\ncrossing basin → qualitative change"
+    "text": "3B. Basins of Attraction\nThe system evolves within a space of possible states.\nSome states act as attractors.\n\\[\nx^* = F(x^*, u^*)\n\\]\nStates near these points converge toward them.\n\n\nInterpretation\nDisease corresponds to being confined within a basin of attraction.\n\n\n\nTherapy Reinterpreted\n\nwithin basin → temporary effect\n\ncrossing basin → qualitative change"
   },
   {
     "objectID": "article10.html#c.-energy-landscape-intuition",
     "href": "article10.html#c.-energy-landscape-intuition",
     "title": "FC02 — Article 10 — System Dynamics",
     "section": "3C. Energy Landscape (Intuition)",
-    "text": "3C. Energy Landscape (Intuition)\nWe can interpret stability using a function:\n\\[\nV(x)\n\\]\nLower values correspond to more stable states.\n\n\nApproximate dynamics\n\\[\nx(t+1) \\approx x(t) - \\nabla V(x(t))\n\\]\nThis is an approximation, not a general rule.\nIt helps visualize how systems settle into stable states.\n\n\n\nImplication\n\nRecovery requires crossing stability barriers, not just reversing direction."
+    "text": "3C. Energy Landscape (Intuition)\nWe can interpret stability using a function:\n\\[\nV(x)\n\\]\nLower values correspond to more stable states.\n\n\nApproximate dynamics\n\\[\nx(t+1) \\approx x(t) - \\nabla V(x(t))\n\\]\nThis is an approximation, not a general rule.\nIt helps visualize how systems settle into stable states.\n\n\n\nImplication\nRecovery requires crossing stability barriers, not just reversing direction."
   },
   {
     "objectID": "article10.html#properties-of-the-dynamics",
@@ -179,6 +179,6 @@
     "href": "article10.html#closing",
     "title": "FC02 — Article 10 — System Dynamics",
     "section": "Closing",
-    "text": "Closing\nWe no longer have a description.\nWe have a model class.\nFrom this point forward:\n\nEvery claim must be consistent with this structure."
+    "text": "Closing\nWe no longer have a description.\nWe have a model class.\nFrom this point forward:\nEvery claim must be consistent with this structure."
   }
 ]
