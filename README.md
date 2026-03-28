@@ -6,7 +6,7 @@ A formal systems framework for understanding immune dynamics.
 
 ## Start Here
 
-👉 **[Article 10 — System Dynamics](https://raveendranr.github.io/systems-immunology/)**  
+👉 **[Article 10 — System Dynamics] (https://raveendranr.github.io/systems-immunology/article10.html)**  
 The first formal model defining how the immune system evolves.
 
 This marks the transition from descriptive understanding → to explicit system modeling.
