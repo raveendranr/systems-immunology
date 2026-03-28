@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Systems Engineering Immunology</title>
+<title>FC02 — Article 10 — System Dynamics – Systems Engineering Immunology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -85,13 +114,48 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#systems-engineering-immunology" id="toc-systems-engineering-immunology" class="nav-link active" data-scroll-target="#systems-engineering-immunology">Systems Engineering Immunology</a>
+  <li><a href="#a-formal-definition-of-how-the-immune-system-evolves" id="toc-a-formal-definition-of-how-the-immune-system-evolves" class="nav-link active" data-scroll-target="#a-formal-definition-of-how-the-immune-system-evolves">A formal definition of how the immune system evolves</a></li>
+  <li><a href="#system-definition" id="toc-system-definition" class="nav-link" data-scroll-target="#system-definition">1. System Definition</a></li>
+  <li><a href="#state-representation" id="toc-state-representation" class="nav-link" data-scroll-target="#state-representation">2. State Representation</a>
   <ul class="collapse">
-  <li><a href="#start-here" id="toc-start-here" class="nav-link" data-scroll-target="#start-here">Start Here</a></li>
-  <li><a href="#foundations-fc01" id="toc-foundations-fc01" class="nav-link" data-scroll-target="#foundations-fc01">Foundations (FC01)</a></li>
-  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure">Structure</a></li>
-  <li><a href="#live-exploration" id="toc-live-exploration" class="nav-link" data-scroll-target="#live-exploration">Live Exploration</a></li>
+  <li><a href="#explicit-state-structure" id="toc-explicit-state-structure" class="nav-link" data-scroll-target="#explicit-state-structure">Explicit State Structure</a></li>
+  <li><a href="#partitioned-state" id="toc-partitioned-state" class="nav-link" data-scroll-target="#partitioned-state">Partitioned State</a></li>
   </ul></li>
+  <li><a href="#state-evolution" id="toc-state-evolution" class="nav-link" data-scroll-target="#state-evolution">3. State Evolution</a>
+  <ul class="collapse">
+  <li><a href="#component-wise-view" id="toc-component-wise-view" class="nav-link" data-scroll-target="#component-wise-view">Component-wise View</a></li>
+  </ul></li>
+  <li><a href="#a.-minimal-example" id="toc-a.-minimal-example" class="nav-link" data-scroll-target="#a.-minimal-example">3A. Minimal Example</a>
+  <ul class="collapse">
+  <li><a href="#low-initial-state" id="toc-low-initial-state" class="nav-link" data-scroll-target="#low-initial-state">Low initial state</a></li>
+  <li><a href="#higher-initial-state" id="toc-higher-initial-state" class="nav-link" data-scroll-target="#higher-initial-state">Higher initial state</a></li>
+  <li><a href="#implication" id="toc-implication" class="nav-link" data-scroll-target="#implication">Implication</a></li>
+  </ul></li>
+  <li><a href="#b.-basins-of-attraction" id="toc-b.-basins-of-attraction" class="nav-link" data-scroll-target="#b.-basins-of-attraction">3B. Basins of Attraction</a>
+  <ul class="collapse">
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#therapy-reinterpreted" id="toc-therapy-reinterpreted" class="nav-link" data-scroll-target="#therapy-reinterpreted">Therapy Reinterpreted</a></li>
+  </ul></li>
+  <li><a href="#c.-energy-landscape-intuition" id="toc-c.-energy-landscape-intuition" class="nav-link" data-scroll-target="#c.-energy-landscape-intuition">3C. Energy Landscape (Intuition)</a>
+  <ul class="collapse">
+  <li><a href="#approximate-dynamics" id="toc-approximate-dynamics" class="nav-link" data-scroll-target="#approximate-dynamics">Approximate dynamics</a></li>
+  <li><a href="#implication-1" id="toc-implication-1" class="nav-link" data-scroll-target="#implication-1">Implication</a></li>
+  </ul></li>
+  <li><a href="#properties-of-the-dynamics" id="toc-properties-of-the-dynamics" class="nav-link" data-scroll-target="#properties-of-the-dynamics">4. Properties of the Dynamics</a>
+  <ul class="collapse">
+  <li><a href="#nonlinearity" id="toc-nonlinearity" class="nav-link" data-scroll-target="#nonlinearity">Nonlinearity</a></li>
+  <li><a href="#state-dependence" id="toc-state-dependence" class="nav-link" data-scroll-target="#state-dependence">State Dependence</a></li>
+  <li><a href="#feedback" id="toc-feedback" class="nav-link" data-scroll-target="#feedback">Feedback</a></li>
+  <li><a href="#local-linear-approximation" id="toc-local-linear-approximation" class="nav-link" data-scroll-target="#local-linear-approximation">Local Linear Approximation</a></li>
+  </ul></li>
+  <li><a href="#observation" id="toc-observation" class="nav-link" data-scroll-target="#observation">5. Observation</a>
+  <ul class="collapse">
+  <li><a href="#consequence" id="toc-consequence" class="nav-link" data-scroll-target="#consequence">Consequence</a></li>
+  </ul></li>
+  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure">6. Structure</a></li>
+  <li><a href="#core-claim" id="toc-core-claim" class="nav-link" data-scroll-target="#core-claim">7. Core Claim</a></li>
+  <li><a href="#what-this-model-does-not-claim" id="toc-what-this-model-does-not-claim" class="nav-link" data-scroll-target="#what-this-model-does-not-claim">8. What This Model Does Not Claim</a></li>
+  <li><a href="#closing" id="toc-closing" class="nav-link" data-scroll-target="#closing">Closing</a></li>
   </ul>
 </nav>
     </div>
@@ -100,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Systems Engineering Immunology</h1>
+<h1 class="title">FC02 — Article 10 — System Dynamics</h1>
 </div>
 
 
@@ -117,38 +181,287 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="systems-engineering-immunology" class="level1">
-<h1>Systems Engineering Immunology</h1>
-<p>A formal systems framework for understanding immune dynamics.</p>
+<section id="a-formal-definition-of-how-the-immune-system-evolves" class="level2">
+<h2 class="anchored" data-anchor-id="a-formal-definition-of-how-the-immune-system-evolves">A formal definition of how the immune system evolves</h2>
+<p>Up to this point, we have been describing the system through patterns and observations.</p>
+<p>What follows is where that description becomes a model.</p>
 <hr>
-<section id="start-here" class="level2">
-<h2 class="anchored" data-anchor-id="start-here">Start Here</h2>
-<p>👉 <a href="article10.html">Article 10 — System Dynamics</a></p>
+<p>We have described the system.</p>
+<p>Now we commit to modeling it.</p>
+<p>If the immune system is a state-based system, one question becomes unavoidable:</p>
+<p><strong>How does the state evolve?</strong></p>
+<p>A system is defined by how it evolves.<br>
+If we cannot describe that evolution, we do not yet have a model.</p>
 <hr>
 </section>
-<section id="foundations-fc01" class="level2">
-<h2 class="anchored" data-anchor-id="foundations-fc01">Foundations (FC01)</h2>
-<p>Conceptual groundwork leading to formal modeling.</p>
+<section id="system-definition" class="level2">
+<h2 class="anchored" data-anchor-id="system-definition">1. System Definition</h2>
+<p>We now make a formal commitment.</p>
+<p>The immune system is a <strong>partially observable, nonlinear, distributed dynamical system with feedback</strong>.</p>
+<p>This is not a descriptive choice. It is a constraint imposed by the system.</p>
+<p>From this, one rule follows:</p>
+<blockquote class="blockquote">
+<p>The future state of the system is determined by its current state and the inputs acting on it.</p>
+</blockquote>
 <hr>
 </section>
-<section id="structure" class="level2">
-<h2 class="anchored" data-anchor-id="structure">Structure</h2>
-<p>This site will evolve into a navigable system of:</p>
+<section id="state-representation" class="level2">
+<h2 class="anchored" data-anchor-id="state-representation">2. State Representation</h2>
+<p>We begin by defining the internal state of the system explicitly.</p>
+<p><span class="math display">\[
+x(t) \in \mathbb{R}^n
+\]</span></p>
+<p>Here, <span class="math inline">\(x(t)\)</span> represents the <strong>true internal state</strong> of the immune system at time <span class="math inline">\(t\)</span>.</p>
+<p>This is not directly observable — it is what we must infer.</p>
+<hr>
+<section id="explicit-state-structure" class="level3">
+<h3 class="anchored" data-anchor-id="explicit-state-structure">Explicit State Structure</h3>
+<p><span class="math display">\[
+x(t) =
+\begin{bmatrix}
+x_1(t) \\
+x_2(t) \\
+\vdots \\
+x_n(t)
+\end{bmatrix}
+\]</span></p>
+<p>Each component represents a dimension of the system:</p>
 <ul>
-<li>Formal models<br>
+<li>immune cell populations<br>
 </li>
-<li>Conceptual layers<br>
+<li>activation states<br>
 </li>
-<li>System representations</li>
+<li>cytokine environments<br>
+</li>
+<li>tissue condition<br>
+</li>
+<li>regulatory signals</li>
+</ul>
+<p>The choice of components defines the resolution of the model.</p>
+<hr>
+</section>
+<section id="partitioned-state" class="level3">
+<h3 class="anchored" data-anchor-id="partitioned-state">Partitioned State</h3>
+<p><span class="math display">\[
+x(t) =
+\begin{bmatrix}
+x_{\text{immune}}(t) \\
+x_{\text{tissue}}(t) \\
+x_{\text{regulatory}}(t)
+\end{bmatrix}
+\]</span></p>
+<p>This reflects the distributed nature of the system.</p>
+<hr>
+</section>
+</section>
+<section id="state-evolution" class="level2">
+<h2 class="anchored" data-anchor-id="state-evolution">3. State Evolution</h2>
+<p>We now define how the state changes over time.</p>
+<p><span class="math display">\[
+x(t+1) = F\big(x(t), u(t)\big)
+\]</span></p>
+<p>The next state depends on the current state and what acts on it.</p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(F\)</span> represents internal dynamics<br>
+</li>
+<li><span class="math inline">\(u(t)\)</span> represents inputs (therapy, infection, environment)</li>
+</ul>
+<hr>
+<section id="component-wise-view" class="level3">
+<h3 class="anchored" data-anchor-id="component-wise-view">Component-wise View</h3>
+<p><span class="math display">\[
+x_i(t+1) = f_i\big(x_1(t), \dots, x_n(t), u(t)\big)
+\]</span></p>
+<p>Each component evolves through interactions with others.</p>
+<p>There is no central controller — behavior emerges from interactions.</p>
+<hr>
+</section>
+</section>
+<section id="a.-minimal-example" class="level2">
+<h2 class="anchored" data-anchor-id="a.-minimal-example">3A. Minimal Example</h2>
+<p>Consider a simple system:</p>
+<ul>
+<li><span class="math inline">\(x(t)\)</span> = inflammation level<br>
+</li>
+<li><span class="math inline">\(u(t)\)</span> = anti-inflammatory input</li>
+</ul>
+<hr>
+<section id="low-initial-state" class="level3">
+<h3 class="anchored" data-anchor-id="low-initial-state">Low initial state</h3>
+<ul>
+<li><span class="math inline">\(x(0) = 0.2\)</span> → decays → stabilizes</li>
 </ul>
 <hr>
 </section>
-<section id="live-exploration" class="level2">
-<h2 class="anchored" data-anchor-id="live-exploration">Live Exploration</h2>
-<p>👉 Substack: https://raveendranr.substack.com</p>
-
-
+<section id="higher-initial-state" class="level3">
+<h3 class="anchored" data-anchor-id="higher-initial-state">Higher initial state</h3>
+<ul>
+<li><span class="math inline">\(x(0) = 0.6\)</span> → amplifies → diverges</li>
+</ul>
+<hr>
 </section>
+<section id="implication" class="level3">
+<h3 class="anchored" data-anchor-id="implication">Implication</h3>
+<blockquote class="blockquote">
+<p>The trajectory depends on the state, not just the intervention.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="b.-basins-of-attraction" class="level2">
+<h2 class="anchored" data-anchor-id="b.-basins-of-attraction">3B. Basins of Attraction</h2>
+<p>The system evolves within a space of possible states.</p>
+<p>Some states act as attractors.</p>
+<p><span class="math display">\[
+x^* = F(x^*, u^*)
+\]</span></p>
+<p>States near these points converge toward them.</p>
+<hr>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<blockquote class="blockquote">
+<p>Disease corresponds to being confined within a basin of attraction.</p>
+</blockquote>
+<hr>
+</section>
+<section id="therapy-reinterpreted" class="level3">
+<h3 class="anchored" data-anchor-id="therapy-reinterpreted">Therapy Reinterpreted</h3>
+<ul>
+<li>within basin → temporary effect<br>
+</li>
+<li>crossing basin → qualitative change</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="c.-energy-landscape-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="c.-energy-landscape-intuition">3C. Energy Landscape (Intuition)</h2>
+<p>We can interpret stability using a function:</p>
+<p><span class="math display">\[
+V(x)
+\]</span></p>
+<p>Lower values correspond to more stable states.</p>
+<hr>
+<section id="approximate-dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="approximate-dynamics">Approximate dynamics</h3>
+<p><span class="math display">\[
+x(t+1) \approx x(t) - \nabla V(x(t))
+\]</span></p>
+<p>This is an approximation, not a general rule.</p>
+<p>It helps visualize how systems settle into stable states.</p>
+<hr>
+</section>
+<section id="implication-1" class="level3">
+<h3 class="anchored" data-anchor-id="implication-1">Implication</h3>
+<blockquote class="blockquote">
+<p>Recovery requires crossing stability barriers, not just reversing direction.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="properties-of-the-dynamics" class="level2">
+<h2 class="anchored" data-anchor-id="properties-of-the-dynamics">4. Properties of the Dynamics</h2>
+<section id="nonlinearity" class="level3">
+<h3 class="anchored" data-anchor-id="nonlinearity">Nonlinearity</h3>
+<p><span class="math display">\[
+F(x_1 + x_2, u) \neq F(x_1, u) + F(x_2, u)
+\]</span></p>
+<p>This allows thresholds and tipping behavior.</p>
+<hr>
+</section>
+<section id="state-dependence" class="level3">
+<h3 class="anchored" data-anchor-id="state-dependence">State Dependence</h3>
+<p><span class="math display">\[
+\frac{\partial F}{\partial u}(x_1) \neq \frac{\partial F}{\partial u}(x_2)
+\]</span></p>
+<p>The same input produces different outcomes in different states.</p>
+<hr>
+</section>
+<section id="feedback" class="level3">
+<h3 class="anchored" data-anchor-id="feedback">Feedback</h3>
+<p><span class="math display">\[
+x(t+2) = F(F(x(t), u(t)), u(t+1))
+\]</span></p>
+<p>The system evolves through feedback loops.</p>
+<hr>
+</section>
+<section id="local-linear-approximation" class="level3">
+<h3 class="anchored" data-anchor-id="local-linear-approximation">Local Linear Approximation</h3>
+<p><span class="math display">\[
+x(t+1) \approx A(x^*)x(t) + B(x^*)u(t)
+\]</span></p>
+<p>Valid only near a specific operating point.</p>
+<hr>
+</section>
+</section>
+<section id="observation" class="level2">
+<h2 class="anchored" data-anchor-id="observation">5. Observation</h2>
+<p>We observe a projection of the true state. <span class="math display">\[
+y(t) = H(x(t))
+\]</span></p>
+<p>This means what we observe is a transformation of the underlying state, not the state itself.</p>
+<hr>
+<section id="consequence" class="level3">
+<h3 class="anchored" data-anchor-id="consequence">Consequence</h3>
+<p><span class="math display">\[
+x(t) \neq H^{-1}(y(t))
+\]</span></p>
+<p>The state cannot be uniquely reconstructed.</p>
+<hr>
+</section>
+</section>
+<section id="structure" class="level2">
+<h2 class="anchored" data-anchor-id="structure">6. Structure</h2>
+<p>All previously introduced elements resolve into this structure:</p>
+<ul>
+<li>state<br>
+</li>
+<li>dynamics<br>
+</li>
+<li>observation<br>
+</li>
+<li>input</li>
+</ul>
+<hr>
+</section>
+<section id="core-claim" class="level2">
+<h2 class="anchored" data-anchor-id="core-claim">7. Core Claim</h2>
+<blockquote class="blockquote">
+<p>Disease is not a condition.<br>
+It is a trajectory of <span class="math inline">\(x(t)\)</span> over time.</p>
+</blockquote>
+<p>And:</p>
+<blockquote class="blockquote">
+<p>Clinical labels classify <span class="math inline">\(y(t)\)</span>, not <span class="math inline">\(x(t)\)</span>.</p>
+</blockquote>
+<hr>
+</section>
+<section id="what-this-model-does-not-claim" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-model-does-not-claim">8. What This Model Does Not Claim</h2>
+<p>This is a model class, not a full specification.</p>
+<p>It does not define:</p>
+<ul>
+<li>exact form of <span class="math inline">\(F\)</span><br>
+</li>
+<li>estimation methods<br>
+</li>
+<li>control strategies<br>
+</li>
+<li>disease-specific mappings</li>
+</ul>
+<hr>
+</section>
+<section id="closing" class="level2">
+<h2 class="anchored" data-anchor-id="closing">Closing</h2>
+<p>We no longer have a description.</p>
+<p>We have a model class.</p>
+<p>From this point forward:</p>
+<blockquote class="blockquote">
+<p>Every claim must be consistent with this structure.</p>
+</blockquote>
+
+
 </section>
 
 </main> <!-- /main -->
