@@ -1,0 +1,35 @@
+---
+title: Systems Engineering Immunology
+---
+
+# Systems Engineering Immunology
+
+A formal systems framework for understanding immune dynamics.
+
+---
+
+## Start Here
+
+👉 [Article 10 — System Dynamics](article10.html)
+
+---
+
+## Foundations (FC01)
+
+Conceptual groundwork leading to formal modeling.
+
+---
+
+## Structure
+
+This site will evolve into a navigable system of:
+
+- Formal models  
+- Conceptual layers  
+- System representations  
+
+---
+
+## Live Exploration
+
+👉 Substack: https://raveendranr.substack.com
