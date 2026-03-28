@@ -2,8 +2,6 @@
 title: Systems Engineering Immunology
 ---
 
-# Systems Engineering Immunology
-
 A formal systems framework for understanding immune dynamics.
 
 ---
