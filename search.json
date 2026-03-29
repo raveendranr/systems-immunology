@@ -2,42 +2,28 @@
   {
     "objectID": "foundations.html",
     "href": "foundations.html",
-    "title": "Foundations (FC01)",
+    "title": "Foundations — Phase 1",
     "section": "",
     "text": "These articles form the conceptual base for the formal model introduced in Article 10."
   },
   {
-    "objectID": "foundations.html#they-should-be-read-as-a-progression-toward-system-level-thinking.",
-    "href": "foundations.html#they-should-be-read-as-a-progression-toward-system-level-thinking.",
-    "title": "Foundations (FC01)",
-    "section": "They should be read as a progression toward system-level thinking.",
-    "text": "They should be read as a progression toward system-level thinking."
-  },
-  {
-    "objectID": "foundations.html#title-foundations-fc01",
-    "href": "foundations.html#title-foundations-fc01",
-    "title": "Foundations (FC01)",
-    "section": "title: Foundations (FC01)",
-    "text": "title: Foundations (FC01)"
-  },
-  {
     "objectID": "foundations.html#articles",
     "href": "foundations.html#articles",
-    "title": "Foundations (FC01)",
+    "title": "Foundations — Phase 1",
     "section": "Articles",
     "text": "Articles\n\nArticle 01 — When the Numbers Don’t Explain the Disease\n\nArticle 02 — Why Immunology Needs Systems Thinking\n\nArticle 03 — The Immune System Is Not a Hierarchy\n\nArticle 04 — Observability in Biological Systems\n\nArticle 05 — State-Space Representation\n\nArticle 06 — Multi-Agent Immune System\n\nArticle 07 — Consensus Dynamics\n\nArticle 08 — Therapy as Control Inputs\n\nArticle 09 — Formalizing the System"
   },
   {
     "objectID": "foundations.html#role-in-the-framework",
     "href": "foundations.html#role-in-the-framework",
-    "title": "Foundations (FC01)",
+    "title": "Foundations — Phase 1",
     "section": "Role in the Framework",
     "text": "Role in the Framework\nThese pieces move from:\n\nobservation → pattern\n\npattern → structure\n\nThey set up the transition to formal modeling."
   },
   {
     "objectID": "foundations.html#transition",
     "href": "foundations.html#transition",
-    "title": "Foundations (FC01)",
+    "title": "Foundations — Phase 1",
     "section": "Transition",
     "text": "Transition\n👉 The formal layer begins here:\nSystem Dynamics — Article 10"
   },
