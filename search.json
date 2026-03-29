@@ -74,14 +74,7 @@
     "href": "article10.html",
     "title": "FC02 — Article 10 — System Dynamics",
     "section": "",
-    "text": "Up to this point, we have been describing the system through patterns and observations.\nWhat follows is where that description becomes a model.\n\nWe have described the system.\nNow we commit to modeling it.\nIf the immune system is a state-based system, one question becomes unavoidable:\nHow does the state evolve?\nA system is defined by how it evolves.\nIf we cannot describe that evolution, we do not yet have a model."
-  },
-  {
-    "objectID": "article10.html#a-formal-definition-of-how-the-immune-system-evolves",
-    "href": "article10.html#a-formal-definition-of-how-the-immune-system-evolves",
-    "title": "FC02 — Article 10 — System Dynamics",
-    "section": "",
-    "text": "Up to this point, we have been describing the system through patterns and observations.\nWhat follows is where that description becomes a model.\n\nWe have described the system.\nNow we commit to modeling it.\nIf the immune system is a state-based system, one question becomes unavoidable:\nHow does the state evolve?\nA system is defined by how it evolves.\nIf we cannot describe that evolution, we do not yet have a model."
+    "text": "We have described the system.\nThat is no longer enough.\nIf the immune system is truly a dynamical system, then one question becomes unavoidable:\nUntil we answer this, we do not have a model.\nWe only have observations.\nWhat follows is the first formal step:\nA definition of the system in terms of:\nFrom this point forward, the system is no longer described - it is specified."
   },
   {
     "objectID": "article10.html#system-definition",
